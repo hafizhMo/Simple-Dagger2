@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         button = findViewById(R.id.button_hello)
 
-        presenter = PrisonPresenter(this)
+        presenter = PrisonPresenter(PrisonRepository(this))
 
         button.setOnClickListener {
             presenter.getData()
