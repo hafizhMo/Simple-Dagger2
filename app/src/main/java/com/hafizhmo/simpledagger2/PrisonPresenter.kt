@@ -1,11 +1,8 @@
 package com.hafizhmo.simpledagger2
 
-import android.content.Context
+import javax.inject.Inject
 
-class PrisonPresenter(private val context: Context){
-
-    private val repository = PrisonRepository(context)
-
+class PrisonPresenter @Inject constructor(private val repository: PrisonRepository){
     fun getData(){
         repository.load()
     }
